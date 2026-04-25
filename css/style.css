@@ -1,0 +1,14 @@
+@import "tailwind";
+
+body {
+  font-family: "DM Sans";
+}
+
+.Container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+}
