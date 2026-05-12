@@ -1,0 +1,64 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: #0b1020;
+  color: #e7ecff;
+  font-family: "Segoe UI", Roboto, system-ui, sans-serif;
+  min-height: 100vh;
+}
+.app-wrap {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.like-btn {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(255, 255, 255, 0.08);
+  padding: 16px 30px;
+  border-radius: 99px;
+  font-size: 16px;
+  color: #e7ecff;
+  cursor: pointer;
+  transition: all 0.25s;
+}
+.like-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(239, 68, 68, 0.2);
+}
+/* Bosilganda shu class qo'shing: liked && "active" */
+.like-btn.active {
+  border-color: #ef4444;
+  background: rgba(239, 68, 68, 0.1);
+}
+.heart {
+  font-size: 32px;
+  color: rgba(255, 255, 255, 0.4);
+  transition: color 0.3s;
+  display: inline-block;
+}
+.like-btn.active .heart {
+  color: #ef4444;
+  animation: pop 0.5s;
+}
+@keyframes pop {
+  0% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(1.6);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.like-count {
+  font-weight: 700;
+  font-size: 18px;
+}
